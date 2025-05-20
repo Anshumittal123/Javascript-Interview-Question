@@ -190,17 +190,14 @@ let scores = [34, 67, 89, 90, 96, 85, 62];
 let newScores = scores.filter(el=>{
     return el>90
 });
-
 console.log("new score: ", newScores);
 
 let checkChar = content.filter(val=>{
     return !val.includes("a");
 })
-
 console.log(checkChar);
 
 let newWords = content.filter(el=>{
     return el.split("a").length <= 2;
 })
-
 console.log(newWords);

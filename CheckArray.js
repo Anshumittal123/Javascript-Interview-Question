@@ -176,7 +176,7 @@ let res = mapValue.map(el=>{
 })
 console.log("new value of each elements: ", res);
 
-let content = ["hello", "a", "apple", "guava", "harsh", "nishi"];
+let content = ["hello", "a", "apple", "guava", "harsh", "nishi", "anushka"];
 let elements = content.map(val=>{
     if(val.length === 5) return `<p>${val}</p>`
     else return `<span>${val}</span>`
@@ -192,3 +192,15 @@ let newScores = scores.filter(el=>{
 });
 
 console.log("new score: ", newScores);
+
+let checkChar = content.filter(val=>{
+    return !val.includes("a");
+})
+
+console.log(checkChar);
+
+let newWords = content.filter(el=>{
+    return el.split("a").length <= 2;
+})
+
+console.log(newWords);

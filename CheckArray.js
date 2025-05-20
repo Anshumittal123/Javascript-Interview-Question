@@ -167,3 +167,28 @@ function bindFunc(){
 }
 let newFunc = bindFunc.bind(object);
 newFunc();
+
+
+// Map
+let mapValue = [1,2,3,4,5];
+let res = mapValue.map(el=>{
+    return el*2;
+})
+console.log("new value of each elements: ", res);
+
+let content = ["hello", "a", "apple", "guava", "harsh", "nishi"];
+let elements = content.map(val=>{
+    if(val.length === 5) return `<p>${val}</p>`
+    else return `<span>${val}</span>`
+})
+console.log(elements);
+
+
+// filter
+let scores = [34, 67, 89, 90, 96, 85, 62];
+
+let newScores = scores.filter(el=>{
+    return el>90
+});
+
+console.log("new score: ", newScores);

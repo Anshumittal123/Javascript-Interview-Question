@@ -201,3 +201,45 @@ let newWords = content.filter(el=>{
     return el.split("a").length <= 2;
 })
 console.log(newWords);
+
+
+// sort
+let myArr = [15,40,1,13,2];
+myArr.sort((a,b) => a-b); // a-b = (+)ve A greater than other if (-)ve A less then
+console.log(myArr);
+
+
+
+// IIFE = Immediately invoked function expression. it immediately called as it is created. why will use it => to create a private variables.
+(function(){
+    console.log("Hello from iife function.");
+    var a = 12;
+})()
+
+// console.log(a); // directly not accessable a private variable. 
+
+let ans = (function(){
+    var a = 12;
+    return {
+        getter: function(){
+            console.log(a);
+        },
+        setter: function(updatedValue){
+            a = updatedValue
+        }
+    }
+})()
+
+ans.getter();
+ans.setter(45);
+ans.getter();
+
+
+// asynchronous & synchronous
+console.log("Hello1"); // syn
+console.log("Hello2"); // syn
+setTimeout(()=>{
+    console.log("Hello3"); // Asy
+},1000)
+console.log("Hello4"); // syn
+console.log("Hello5"); // syn

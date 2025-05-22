@@ -243,3 +243,12 @@ setTimeout(()=>{
 },1000)
 console.log("Hello4"); // syn
 console.log("Hello5"); // syn
+
+// slice and splice
+let myArr2 = [1,2,3,4,5,6,7,8];
+
+// console.log(myArr2.slice(2, 6));
+// console.log(myArr2.slice(-6, -1));
+
+console.log(myArr2.splice(2, 4));
+console.log(myArr2);

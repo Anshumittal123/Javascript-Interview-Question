@@ -126,6 +126,18 @@ function abcd(value){
 console.log(abcd(10)(20));
 
 
+function operation(operationFn, a, b){
+    return operationFn(a, b);
+}
+
+function sum(a, b){
+    return a+b;
+}
+let result = operation(sum, 5, 6);
+console.log("Result of a HOF:-",result);
+
+
+
 // This
 // global => window
 console.log(this);

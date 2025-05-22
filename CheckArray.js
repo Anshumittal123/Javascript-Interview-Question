@@ -264,3 +264,16 @@ let myArr2 = [1,2,3,4,5,6,7,8];
 
 console.log(myArr2.splice(2, 4));
 console.log(myArr2);
+
+
+// closures
+function outerFn(){
+    let outerVar = "I am from outer function";
+    function innerFn(){
+        console.log(outerVar);
+    }
+    return innerFn
+}
+
+let fu = outerFn(); // After excute a function it distory all of the local variable.
+fu(); // but with a help of closures we still able to hold the local variable of the outer function. 

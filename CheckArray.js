@@ -277,3 +277,30 @@ function outerFn(){
 
 let fu = outerFn(); // After excute a function it distory all of the local variable.
 fu(); // but with a help of closures we still able to hold the local variable of the outer function. 
+
+
+// curry in function 
+function parent(a){
+    return function(b){
+        return a + b;
+    }
+}
+
+const child = parent(2);
+const Ans = child(3);
+console.log("Result of an add:", Ans);
+
+
+// Pure Function 
+// doesn't change global variable value
+// if function give same value so, it will return same result everytime. 
+let global = 12;
+function sum(a){
+    console.log(a+3);
+} 
+sum(12);  // it's a prue function
+
+function increment(){
+    console.log(global+1);
+}
+increment(); // it's not a prue function
